@@ -1,0 +1,112 @@
+GET http://localhost:8800/api/users?username=yugesh
+
+###
+
+PUT http://localhost:8800/api/users/62d2aeb91c1318a912fb9ba7
+Content-Type: application/json
+
+{
+    "userId": "62d2aeb91c1318a912fb9ba7",
+    "profilePicture" : "person/2.jpeg"
+}
+###
+
+POST http://localhost:8800/api/auth/register
+Content-Type: application/json
+
+{
+    "username" : "sami",
+    "email" : "sami@gmail.com",
+    "password" : "samii",
+    "desc" : "holaa",
+    "city": "rio",
+    "from" : "brazill",
+    "relationship": "0"
+
+}
+
+###
+
+POST http://localhost:8800/api/auth/login
+Content-Type: application/json
+
+{
+    "email" : "yugesh@gmail.com",
+    "password" : "yugesh123"
+}
+
+###
+
+DELETE http://localhost:8800/api/users/62c2c28da12ff5b6c2fc9b15
+Content-Type: application/json
+
+{
+   "userId" : "62c2c28da12ff5b6c2fc9b15"
+}
+
+###
+
+PUT http://localhost:8800/api/users/62d2afb51c1318a912fb9bad/follow
+Content-Type: application/json
+
+{
+    "userId" : "62d2aeb91c1318a912fb9ba7"
+}
+
+###
+
+PUT http://localhost:8800/api/users/62c320c9eee2b9e4064ee9e2/unfollow
+Content-Type: application/json
+
+{
+    "userId" : "62c2dc640662054cd32bd958"
+}
+
+###
+
+POST http://localhost:8800/api/posts
+Content-Type: application/json
+
+{
+    "userId" : "62d121de9fc4ae3911a9607c",
+    "desc" : "hey guys",
+    "img": "post/3.jpeg"
+
+}
+
+###
+
+PUT http://localhost:8800/api/posts/62c33a25852c028ef316cec6
+Content-Type: application/json
+
+{
+    "userId" : "62c320c9eee2b9e4064ee9e2",
+    "desc" : "my first post!!"
+}
+
+###
+
+DELETE http://localhost:8800/api/posts/62c33a25852c028ef316cec6
+Content-Type: application/json
+
+{
+    "userId" : "62c320c9eee2b9e4064ee9e1"
+}
+
+###
+
+GET http://localhost:8800/api/posts/timeline/62d121de9fc4ae3911a9607c
+
+###
+GET http://localhost:8800/api/posts/profile/jane
+
+###
+POST http://localhost:8800/upload
+Content-Type: application/image/png
+
+{
+    "name": "public/assets/person/noCover.png"
+}
+
+###
+GET http://localhost:8800/api/users/friends/62d2aeb91c1318a912fb9ba7
