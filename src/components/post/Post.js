@@ -18,7 +18,7 @@ const Post = ({ myKey, post }) => {
   }, [currUser._id, post.likes]);
   const likeHandler = () => {
     try {
-      axios.put("/api/posts/" + post._id + "/like", {
+      axios.put("/posts/" + post._id + "/like", {
         userId: currUser._id,
       });
     } catch (e) {}
