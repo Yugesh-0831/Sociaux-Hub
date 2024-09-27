@@ -1,8 +1,8 @@
-GET http://localhost:8800/api/users?username=yugesh
+GET /api/users?username=yugesh
 
 ###
 
-PUT http://localhost:8800/api/users/62d2aeb91c1318a912fb9ba7
+PUT /api/users/62d2aeb91c1318a912fb9ba7
 Content-Type: application/json
 
 {
@@ -11,7 +11,7 @@ Content-Type: application/json
 }
 ###
 
-POST http://localhost:8800/api/auth/register
+POST /api/auth/register
 Content-Type: application/json
 
 {
@@ -27,7 +27,7 @@ Content-Type: application/json
 
 ###
 
-POST http://localhost:8800/api/auth/login
+POST /api/auth/login
 Content-Type: application/json
 
 {
@@ -37,7 +37,7 @@ Content-Type: application/json
 
 ###
 
-DELETE http://localhost:8800/api/users/62c2c28da12ff5b6c2fc9b15
+DELETE /api/users/62c2c28da12ff5b6c2fc9b15
 Content-Type: application/json
 
 {
@@ -46,7 +46,7 @@ Content-Type: application/json
 
 ###
 
-PUT http://localhost:8800/api/users/62d2afb51c1318a912fb9bad/follow
+PUT /api/users/62d2afb51c1318a912fb9bad/follow
 Content-Type: application/json
 
 {
@@ -55,7 +55,7 @@ Content-Type: application/json
 
 ###
 
-PUT http://localhost:8800/api/users/62c320c9eee2b9e4064ee9e2/unfollow
+PUT /api/users/62c320c9eee2b9e4064ee9e2/unfollow
 Content-Type: application/json
 
 {
@@ -64,7 +64,7 @@ Content-Type: application/json
 
 ###
 
-POST http://localhost:8800/api/posts
+POST /api/posts
 Content-Type: application/json
 
 {
@@ -76,7 +76,7 @@ Content-Type: application/json
 
 ###
 
-PUT http://localhost:8800/api/posts/62c33a25852c028ef316cec6
+PUT /api/posts/62c33a25852c028ef316cec6
 Content-Type: application/json
 
 {
@@ -86,7 +86,7 @@ Content-Type: application/json
 
 ###
 
-DELETE http://localhost:8800/api/posts/62c33a25852c028ef316cec6
+DELETE /api/posts/62c33a25852c028ef316cec6
 Content-Type: application/json
 
 {
@@ -95,13 +95,13 @@ Content-Type: application/json
 
 ###
 
-GET http://localhost:8800/api/posts/timeline/62d121de9fc4ae3911a9607c
+GET /api/posts/timeline/62d121de9fc4ae3911a9607c
 
 ###
-GET http://localhost:8800/api/posts/profile/jane
+GET /api/posts/profile/jane
 
 ###
-POST http://localhost:8800/upload
+POST /upload
 Content-Type: application/image/png
 
 {
@@ -109,4 +109,4 @@ Content-Type: application/image/png
 }
 
 ###
-GET http://localhost:8800/api/users/friends/62d2aeb91c1318a912fb9ba7
+GET /api/users/friends/62d2aeb91c1318a912fb9ba7
