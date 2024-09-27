@@ -1,23 +1,23 @@
-import "./sidebar.css"
+import "./sidebar.css";
 import {
-    RssFeed,
-    Chat,
-    PlayCircleFilledOutlined,
-    Group,
-    Bookmark,
-    HelpOutline,
-    WorkOutline,
-    Event,
-    School,
-  } from "@material-ui/icons";
-  import CloseFriend from "../closeFriend/CloseFriend";
+  RssFeed,
+  Chat,
+  PlayCircleFilledOutlined,
+  Group,
+  Bookmark,
+  HelpOutline,
+  WorkOutline,
+  Event,
+  School,
+} from "@mui/icons-material";
+import CloseFriend from "../closeFriend/CloseFriend";
 import { Users } from "../../dummyData";
 
 const Sidebar = () => {
-    return (
-        <div className="sidebar">
-            <div className="sidebarWrapper">
-            <ul className="sidebarList">
+  return (
+    <div className="sidebar">
+      <div className="sidebarWrapper">
+        <ul className="sidebarList">
           <li className="sidebarListItem">
             <RssFeed className="sidebarIcon" />
             <span className="sidebarListItemText">Feed</span>
@@ -58,13 +58,13 @@ const Sidebar = () => {
         <button className="sidebarButton"> Show more</button>
         <hr className="sidebarHr" />
         <ul className="sidebarFriendList">
-          {Users.map((u)=>{
-            return <CloseFriend key={u.id} user={u}/>
-            })}
+          {Users.map((u) => {
+            return <CloseFriend key={u.id} user={u} />;
+          })}
         </ul>
-            </div>
-        </div>
-    );
+      </div>
+    </div>
+  );
 };
 
 export default Sidebar;
